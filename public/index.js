@@ -16,7 +16,7 @@ $(document).ready(function () {
         } 
     }
 
-    function ajaxReq(obj, delay) {
+    function ajaxReq(obj) {
         $.ajax({
             url: '/data/'+obj+'.json',
             data: obj
