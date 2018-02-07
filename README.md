@@ -1,7 +1,7 @@
 ## Installing
 
 ```
-$ git clone https://github.com/jsmojo/ajaxStop/
+$ git clone https://github.com/jsmojo/ajaxstop/
 ```
 
 ```
