@@ -1,13 +1,7 @@
 
 $(document).ready(function () {
+    //Test data 
     var counter = 0;
-
-    function myCB() {
-        setTimeout(function() {
-            $( "#root" ).append('<div><h2>All requests complete</h2></div>' );
-        }, 500);
-    }
-
     var streams = {
         each: function (callback) {
             callback('data1');
@@ -15,7 +9,6 @@ $(document).ready(function () {
             callback('data3');
         } 
     }
-
     function ajaxReq(obj) {
         $.ajax({
             url: '/data/'+obj+'.json',
@@ -27,6 +20,14 @@ $(document).ready(function () {
     }
     
     streams.each(ajaxReq);
+    
+    // Callback function
+    function myCB() {
+        setTimeout(function() {
+            $( "#root" ).append('<div><h2>All requests complete</h2></div>' );
+        }, 500);
+    }
+    //request to call myCB when all ajax requests are complete
     callWhenRadyToGo(myCB);
 });
 
